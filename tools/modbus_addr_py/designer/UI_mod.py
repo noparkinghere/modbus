@@ -1,0 +1,97 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'UI_mod.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form_mod(object):
+    def setupUi(self, Form_mod):
+        Form_mod.setObjectName("Form_mod")
+        Form_mod.resize(389, 385)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Form_mod)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.read_btn = QtWidgets.QPushButton(Form_mod)
+        self.read_btn.setObjectName("read_btn")
+        self.horizontalLayout_2.addWidget(self.read_btn)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem)
+        self.set_btn = QtWidgets.QPushButton(Form_mod)
+        self.set_btn.setObjectName("set_btn")
+        self.horizontalLayout_2.addWidget(self.set_btn)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.mod_table = QtWidgets.QTableWidget(Form_mod)
+        self.mod_table.setAlternatingRowColors(True)
+        self.mod_table.setGridStyle(QtCore.Qt.NoPen)
+        self.mod_table.setObjectName("mod_table")
+        self.mod_table.setColumnCount(3)
+        self.mod_table.setRowCount(10)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(7, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(8, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setVerticalHeaderItem(9, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.mod_table.setHorizontalHeaderItem(2, item)
+        self.verticalLayout.addWidget(self.mod_table)
+
+        self.retranslateUi(Form_mod)
+        QtCore.QMetaObject.connectSlotsByName(Form_mod)
+
+    def retranslateUi(self, Form_mod):
+        _translate = QtCore.QCoreApplication.translate
+        Form_mod.setWindowTitle(_translate("Form_mod", "数据修正"))
+        self.read_btn.setText(_translate("Form_mod", "读取修正值"))
+        self.set_btn.setText(_translate("Form_mod", "设置修正值"))
+        item = self.mod_table.verticalHeaderItem(0)
+        item.setText(_translate("Form_mod", "修正点 01"))
+        item = self.mod_table.verticalHeaderItem(1)
+        item.setText(_translate("Form_mod", "修正点 02"))
+        item = self.mod_table.verticalHeaderItem(2)
+        item.setText(_translate("Form_mod", "修正点 03"))
+        item = self.mod_table.verticalHeaderItem(3)
+        item.setText(_translate("Form_mod", "修正点 04"))
+        item = self.mod_table.verticalHeaderItem(4)
+        item.setText(_translate("Form_mod", "修正点 05"))
+        item = self.mod_table.verticalHeaderItem(5)
+        item.setText(_translate("Form_mod", "修正点 06"))
+        item = self.mod_table.verticalHeaderItem(6)
+        item.setText(_translate("Form_mod", "修正点 07"))
+        item = self.mod_table.verticalHeaderItem(7)
+        item.setText(_translate("Form_mod", "修正点 08"))
+        item = self.mod_table.verticalHeaderItem(8)
+        item.setText(_translate("Form_mod", "修正点 09"))
+        item = self.mod_table.verticalHeaderItem(9)
+        item.setText(_translate("Form_mod", "修正点 10"))
+        item = self.mod_table.horizontalHeaderItem(0)
+        item.setText(_translate("Form_mod", "测量值"))
+        item = self.mod_table.horizontalHeaderItem(1)
+        item.setText(_translate("Form_mod", "标准点"))
+        item = self.mod_table.horizontalHeaderItem(2)
+        item.setText(_translate("Form_mod", "修正误差"))

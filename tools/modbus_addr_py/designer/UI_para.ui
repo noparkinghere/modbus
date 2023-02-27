@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_para</class>
+ <widget class="QWidget" name="Form_para">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>444</width>
+    <height>222</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>参数设置</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="area_label">
+     <property name="text">
+      <string>截面积</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="area_line"/>
+   </item>
+   <item row="0" column="2" colspan="2">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="set_btn">
+       <property name="text">
+        <string>设置</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="read_btn">
+       <property name="text">
+        <string>读取</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="angle_1_label">
+     <property name="text">
+      <string>角度1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="angle_1_line"/>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="angle_2_label">
+     <property name="text">
+      <string>角度2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QLineEdit" name="angle_2_line"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="len_1_label">
+     <property name="text">
+      <string>声程1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="len_1_line"/>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="len_2_label">
+     <property name="text">
+      <string>声程2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="len_2_line"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="delay_11_label">
+     <property name="text">
+      <string>声延时1-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="delay_11_line"/>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="delay_21_label">
+     <property name="text">
+      <string>声延时2-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QLineEdit" name="delay_21_line"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="delay_12_label">
+     <property name="text">
+      <string>声延时1-2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="delay_12_line"/>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="delay_22_label">
+     <property name="text">
+      <string>声延时2-2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QLineEdit" name="delay_22_line"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="fixed_temp_label">
+     <property name="text">
+      <string>固定温度值</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="fixed_temp_line"/>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="fixed_press_label">
+     <property name="text">
+      <string>固定压力值</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QLineEdit" name="fixed_press_line"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

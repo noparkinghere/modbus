@@ -1,0 +1,247 @@
+
+#include <stdint.h>
+#include "common.h"      
+#include "modbus_base.h"
+
+
+#ifndef MCU_431_MODBUS_TEST_H
+#define MCU_431_MODBUS_TEST_H
+
+
+
+// 积算仪出厂整机
+extern uint16 g_modbus_addr; // 设备地址
+extern uint16 g_t_id[0]; // 表体编号1
+extern uint16 g_t_id[2]; // 表体编号2
+extern uint16 g_t_id[4]; // 表体编号3
+extern uint16 g_t_id[6]; // 表体编号4
+extern uint16 g_t_id[8]; // 表体编号5
+extern uint16 g_t_id[10]; // 表体编号6
+extern uint16 g_t_id[12]; // 表体编号7
+extern uint16 g_t_id[14]; // 表体编号8
+extern uint16 g_t_id[16]; // 表体编号9
+extern uint16 g_t_hard_v[0]; // 硬件版本号1
+extern uint16 g_t_hard_v[2]; // 硬件版本号2
+extern uint16 g_t_hard_v[4]; // 硬件版本号3
+extern uint16 g_t_hard_v[6]; // 硬件版本号4
+extern uint16 g_t_hard_v[8]; // 硬件版本号5
+extern uint16 g_t_soft_v[0]; // 软件版本1
+extern uint16 g_t_soft_v[2]; // 软件版本2
+extern uint16 g_t_soft_v[4]; // 软件版本3
+extern uint16 g_t_soft_v[6]; // 软件版本4
+extern uint16 g_t_soft_v[8]; // 软件版本5
+extern uint16 g_t_soft_v[10]; // 软件版本6
+extern uint16 g_t_soft_v[12]; // 软件版本7
+extern uint16 g_t_soft_v[14]; // 软件版本8
+extern uint16 g_t_manu_id; // 制造商ID
+extern uint16 g_t_model.model; // 设备类型
+extern uint32 g_t_date; // 出厂日期
+ 
+
+
+
+// 积算仪配置参数
+extern uint16 g_t_ctrl.save; // 存储数据使能
+extern uint16 g_t_status.save; // 存储数据状态
+extern uint16 g_t_ctrl.diag_data; // 诊断数据使能
+extern uint16 g_t_status.diag_data; // 诊断数据状态
+extern uint16 g_t_ctrl.valve; // 开关阀使能
+extern uint16 g_t_status.valve; // 开关阀状态
+extern uint16 g_t_ctrl.err; // 误差修正使能
+extern uint16 g_t_status.err; // 误差修正状态
+extern uint16 g_t_ctrl.net_up; // 物联网上传使能
+extern uint16 g_t_status.net_up; // 物联网上传状态
+extern uint16 g_t_ctrl.net; // 服务器或者域名使能
+extern uint16 g_t_status.net; // 服务器或者域名状态
+extern uint16 g_t_ctrl.ble; // 蓝牙使能
+extern uint16 g_t_status.ble; // 蓝牙状态
+extern uint16 g_t_ctrl.module_rev; // 声时模块接收使能
+extern uint16 g_t_status.module_rev; // 声时模块接收状态
+extern uint16 g_t_ctrl.module_cmd; // 声时模块命令使能
+extern uint16 g_t_status.module_cmd; // 声时模块命令状态
+extern uint16 g_t_ctrl.module_set1; // 设置声时模块数据1使能
+extern uint16 g_t_status.module_set1; // 设置声时模块数据1状态
+extern uint16 g_t_ctrl.module_set2; // 设置声时模块数据2使能
+extern uint16 g_t_status.module_set2; // 设置声时模块数据2状态
+extern uint16 g_t_ctrl.console; // 终端console使能
+extern uint16 g_t_status.console; // 终端console状态
+extern uint16 g_t_ctrl.infrared; // 红外数据通讯使能
+extern uint16 g_t_status.infrared; // 红外数据通讯状态
+extern uint16 g_t_ctrl.tamper; // 防拆外壳被打开开启使能
+extern uint16 g_t_status.tamper; // 防拆外壳被打开开启状态
+extern uint16 g_t_ctrl.calib; // 标定使能
+extern uint16 g_t_status.calib; // 标定状态
+extern uint16 g_t_ctrl.t_low_p; // 积算仪电量过低使能
+extern uint16 g_t_status.t_low_p; // 积算仪电量过低状态
+extern uint16 g_t_ctrl.m_low_p; // 模块电量过低使能
+extern uint16 g_t_status.m_low_p; // 模块电量过低状态
+ 
+
+
+
+// 积算仪其他参数
+extern uint16 g_t_model.model; // 设备类型
+extern real4 g_t_model.qmin; // 最小流量
+extern real4 g_t_model.qmax; // 最大流量
+extern real4 g_t_model.threshold; // 始动流量
+extern real4 g_t_model.p4flow; // 脉冲当量
+extern real4 g_t_total_p; // 正向累积量
+extern real4 g_t_total_n; // 反向累积量
+extern uint16 g_t_freeze_time; // 正常冻结间隔
+extern uint16 g_t_m_def_state; // 积算仪指定模块的默认工作模式
+extern real4 g_t_std_temp; // 标况温度
+extern real4 g_t_std_press; // 标况压力
+extern uint16 g_t_up_time; // 上传时间
+extern uint16 g_net_addr.domain[0]; // 服务器域名1
+extern uint16 g_net_addr.domain[2]; // 服务器域名2
+extern uint16 g_net_addr.domain[4]; // 服务器域名3
+extern uint16 g_net_addr.domain[6]; // 服务器域名4
+extern uint16 g_net_addr.domain[8]; // 服务器域名5
+extern uint16 g_net_addr.domain[10]; // 服务器域名6
+extern uint16 g_net_addr.domain[12]; // 服务器域名7
+extern uint16 g_net_addr.domain[14]; // 服务器域名8
+extern uint16 g_net_addr.domain[16]; // 服务器域名9
+extern uint16 g_net_addr.domain[18]; // 服务器域名10
+extern uint16 g_net_addr.ip[0]; // IP1
+extern uint16 g_net_addr.ip[2]; // IP2
+extern uint16 g_net_addr.ip[4]; // IP3
+extern uint16 g_net_addr.ip[6]; // IP4
+extern uint16 g_net_addr.ip[8]; // IP5
+extern uint16 g_net_addr.ip[10]; // IP6
+extern uint16 g_net_addr.ip[12]; // IP7
+extern uint16 g_net_addr.ip[14]; // IP8
+extern uint16 g_t_tcp_port; // 端口号
+ 
+
+
+
+// 积算仪误差修正
+extern uint16 g_t_amend.points_num; // 工况瞬时量修正点数
+extern real4 g_t_amend.point[0].val; // 工况瞬时量平均值1
+extern real4 g_t_amend.point[0].err; // 工况瞬时量误差值1
+extern real4 g_t_amend.point[1].val; // 工况瞬时量平均值2
+extern real4 g_t_amend.point[1].err; // 工况瞬时量误差值2
+extern real4 g_t_amend.point[2].val; // 工况瞬时量平均值3
+extern real4 g_t_amend.point[2].err; // 工况瞬时量误差值3
+extern real4 g_t_amend.point[3].val; // 工况瞬时量平均值4
+extern real4 g_t_amend.point[3].err; // 工况瞬时量误差值4
+extern real4 g_t_amend.point[4].val; // 工况瞬时量平均值5
+extern real4 g_t_amend.point[4].err; // 工况瞬时量误差值5
+extern real4 g_t_amend.point[5].val; // 工况瞬时量平均值6
+extern real4 g_t_amend.point[5].err; // 工况瞬时量误差值6
+extern real4 g_t_amend.point[6].val; // 工况瞬时量平均值7
+extern real4 g_t_amend.point[6].err; // 工况瞬时量误差值7
+extern real4 g_t_amend.point[7].val; // 工况瞬时量平均值8
+extern real4 g_t_amend.point[7].err; // 工况瞬时量误差值8
+extern real4 g_t_amend.point[8].val; // 工况瞬时量平均值9
+extern real4 g_t_amend.point[8].err; // 工况瞬时量误差值9
+extern real4 g_t_amend.point[9].val; // 工况瞬时量平均值10
+extern real4 g_t_amend.point[9].err; // 工况瞬时量误差值10
+extern real4 g_t_amend.point[10].val; // 工况瞬时量平均值11
+extern real4 g_t_amend.point[10].err; // 工况瞬时量误差值11
+extern real4 g_t_amend.point[11].val; // 工况瞬时量平均值12
+extern real4 g_t_amend.point[11].err; // 工况瞬时量误差值12
+ 
+
+
+
+// 声时模块数据
+extern real4 g_m_bus_base.qusm; // 瞬时流量
+extern real4 g_m_bus_base.tup; // 正向声时
+extern real4 g_m_bus_base.tdn; // 逆向声时
+extern real4 g_m_bus_base.temp; // 温度
+extern real4 g_m_bus_base.press; // 压力
+extern uint16 g_m_bus_base.gain1; // 增益1
+extern uint16 g_m_bus_base.gain2; // 增益2
+extern real4 g_m_bus_diag.qusm; // 诊断瞬时流量
+extern real4 g_m_bus_diag.tup1; // 诊断正向声时1
+extern real4 g_m_bus_diag.tdn1; // 诊断逆向声时1
+extern real4 g_m_bus_diag.tup2; // 诊断正向声时2
+extern real4 g_m_bus_diag.tdn2; // 诊断逆向声时2
+extern real4 g_m_bus_diag.vos1; // 诊断声速1
+extern real4 g_m_bus_diag.temp; // 诊断温度
+extern real4 g_m_bus_diag.press; // 诊断压力
+extern uint16 g_m_bus_diag.gain1; // 诊断增益1
+extern uint16 g_m_bus_diag.gain2; // 诊断增益2
+extern real4 g_m_bus_diag.rup1; // 诊断Rup1
+extern real4 g_m_bus_diag.rdn1; // 诊断Rdown1
+extern real4 g_m_bus_diag.rup2; // 诊断Rup2
+extern real4 g_m_bus_diag.rdn2; // 诊断Rdown2
+extern uint16 g_m_bus_diag.err1; // 诊断Err1
+extern uint16 g_m_bus_diag.err2; // 诊断Err2
+extern uint16 g_m_bus_diag.sys; // 诊断Sys
+extern uint16 g_m_bus_diag.meas_cnt; // 诊断测量次数
+extern real4 g_m_bus_diag.dw1; // 诊断DW1
+extern real4 g_m_bus_diag.dw2; // 诊断DW2
+extern real4 g_m_bus_diag.vos2; // 诊断声速2
+ 
+
+
+
+// 声时模块参数1
+extern uint16 g_m_para1.id[0]; // 表体编号1
+extern uint16 g_m_para1.id[2]; // 表体编号2
+extern uint16 g_m_para1.id[4]; // 表体编号3
+extern uint16 g_m_para1.id[6]; // 表体编号4
+extern uint16 g_m_para1.id[8]; // 表体编号5
+extern uint16 g_m_para1.id[10]; // 表体编号6
+extern uint16 g_m_para1.id[12]; // 表体编号7
+extern uint16 g_m_para1.hard_v[0]; // 硬件版本号1
+extern uint16 g_m_para1.hard_v[2]; // 硬件版本号2
+extern uint16 g_m_para1.hard_v[4]; // 硬件版本号3
+extern uint16 g_m_para1.hard_v[6]; // 硬件版本号4
+extern uint16 g_m_para1.hard_v[8]; // 硬件版本号5
+extern uint16 g_m_para1.soft_v[0]; // 软件版本1
+extern uint16 g_m_para1.soft_v[2]; // 软件版本2
+extern uint16 g_m_para1.soft_v[4]; // 软件版本3
+extern uint16 g_m_para1.soft_v[6]; // 软件版本4
+extern uint16 g_m_para1.soft_v[8]; // 软件版本5
+extern uint16 g_m_para1.soft_v[10]; // 软件版本6
+extern uint16 g_m_para1.soft_v[12]; // 软件版本7
+extern uint16 g_m_para1.soft_v[14]; // 软件版本8
+extern real4 g_m_para1.t_len1; // 理论声程1
+extern real4 g_m_para1.t_len2; // 理论声程2
+extern real4 g_m_para1.r_len1; // 实际声程1
+extern real4 g_m_para1.r_len2; // 实际声程2
+extern uint16 g_m_para1.gain1; // 增益1
+extern uint16 g_m_para1.gain2; // 增益2
+extern real4 g_m_para1.vos1; // 声速1
+extern real4 g_m_para1.vos2; // 声速2
+ 
+
+
+
+// 声时模块参数2
+extern uint16 g_m_para2.points_num; // 工况瞬时量修正点数
+extern real4 g_m_para2.point[0].val; // 工况瞬时量修正点1
+extern real4 g_m_para2.point[0].err; // 工况瞬时量误差值1
+extern real4 g_m_para2.point[1].val; // 工况瞬时量修正点2
+extern real4 g_m_para2.point[1].err; // 工况瞬时量误差值2
+extern real4 g_m_para2.point[2].val; // 工况瞬时量修正点3
+extern real4 g_m_para2.point[2].err; // 工况瞬时量误差值3
+extern real4 g_m_para2.point[3].val; // 工况瞬时量修正点4
+extern real4 g_m_para2.point[3].err; // 工况瞬时量误差值4
+extern real4 g_m_para2.point[4].val; // 工况瞬时量修正点5
+extern real4 g_m_para2.point[4].err; // 工况瞬时量误差值5
+extern real4 g_m_para2.point[5].val; // 工况瞬时量修正点6
+extern real4 g_m_para2.point[5].err; // 工况瞬时量误差值6
+extern real4 g_m_para2.point[6].val; // 工况瞬时量修正点7
+extern real4 g_m_para2.point[6].err; // 工况瞬时量误差值7
+extern real4 g_m_para2.point[7].val; // 工况瞬时量修正点8
+extern real4 g_m_para2.point[7].err; // 工况瞬时量误差值8
+extern real4 g_m_para2.point[8].val; // 工况瞬时量修正点9
+extern real4 g_m_para2.point[8].err; // 工况瞬时量误差值9
+extern real4 g_m_para2.point[9].val; // 工况瞬时量修正点10
+extern real4 g_m_para2.point[9].err; // 工况瞬时量误差值10
+extern real4 g_m_para2.point[10].val; // 工况瞬时量修正点11
+extern real4 g_m_para2.point[10].err; // 工况瞬时量误差值11
+extern real4 g_m_para2.point[11].val; // 工况瞬时量修正点12
+extern real4 g_m_para2.point[11].err; // 工况瞬时量误差值12
+ 
+
+
+
+extern uint16 addr_modbus_addr; /* 通讯地址 */
+
+#endif // MCU_431_MODBUS_TEST_H
+

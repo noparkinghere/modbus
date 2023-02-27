@@ -1,0 +1,1 @@
+pyinstaller  --clean  -Fw  -i img.ico flow.py 

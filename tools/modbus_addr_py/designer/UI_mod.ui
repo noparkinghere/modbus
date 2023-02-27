@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_mod</class>
+ <widget class="QWidget" name="Form_mod">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>389</width>
+    <height>385</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>数据修正</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="read_btn">
+       <property name="text">
+        <string>读取修正值</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="set_btn">
+       <property name="text">
+        <string>设置修正值</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="mod_table">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <row>
+      <property name="text">
+       <string>修正点 01</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 02</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 03</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 04</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 05</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 06</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 07</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 08</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 09</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>修正点 10</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>测量值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>标准点</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>修正误差</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

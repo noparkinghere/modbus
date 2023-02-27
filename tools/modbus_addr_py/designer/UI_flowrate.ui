@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>364</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="Box_set">
+      <property name="title">
+       <string>设置参数</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="chang_line"/>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="kuan_line"/>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLineEdit" name="rad_line"/>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLineEdit" name="sounddelay1_line"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="theorysl_line"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="diameter_label">
+           <property name="text">
+            <string>直径（mm）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="sounddelay1_label">
+           <property name="text">
+            <string>声延时1（ns）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="sounddelay2_label">
+           <property name="text">
+            <string>声延时2（ns）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="st2_line"/>
+         </item>
+         <item row="5" column="3">
+          <widget class="QLineEdit" name="fixpress_line"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="realsl_line"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="theoryst_label">
+           <property name="text">
+            <string>理论声程（mm）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="st1_label">
+           <property name="text">
+            <string>声时1（ns）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="angle_label">
+           <property name="text">
+            <string>角度（°）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="diameter_line"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="rad_label">
+           <property name="text">
+            <string>半径（mm）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="chang_label">
+           <property name="text">
+            <string>长（mm）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="realsl_label">
+           <property name="text">
+            <string>实际声程（mm）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QLineEdit" name="sounddelay2_line"/>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLabel" name="fixpress_label">
+           <property name="text">
+            <string>压力值（Kpa）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="angle_line"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="st2_label">
+           <property name="text">
+            <string>声时2（ns）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="kuan_label">
+           <property name="text">
+            <string>宽（mm）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="st1_line"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="cal_btn">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>换算 ↕</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="save_btn">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>0</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>存储↔</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="Box_show">
+      <property name="title">
+       <string>输出结果</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="sv_label">
+           <property name="text">
+            <string>声速（m/s）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="sv_line">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="fv_label">
+           <property name="text">
+            <string>流速（m/s）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="fv_line">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="wfr_label">
+           <property name="text">
+            <string>工况瞬时量(L/h)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="wfr_line">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="sfr_label">
+           <property name="text">
+            <string>标况瞬时量(L/h)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="sfr_line">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>561</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

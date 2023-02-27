@@ -1,0 +1,1 @@
+C:\Users\Frank\AppData\Local\Programs\Python\Python38\Scripts\pyinstaller.exe --clean  -Fw  -i img.ico run.py
