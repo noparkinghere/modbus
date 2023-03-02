@@ -137,11 +137,14 @@ def json_convert():
     res = f"""{{
     "status": 1,
     "分组数":{int(dict(cfg.items("分组"))["组数"])},
+    "自动读取组":\"{str(dict(cfg.items("自动读取段"))["组号"])}\",
     "寄存器组": [{all}
     ],
     "Author": "Frank",
     "message": "OK"
 }}"""
+
+    # print(dict(cfg.items("自动读取段"))["组号"])
 
     with open(".\\config\\auto_modbus.json", 'w', encoding='utf-8') as f:
         f.write(json.dumps(eval(res), ensure_ascii=False))

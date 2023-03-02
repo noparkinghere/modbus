@@ -144,14 +144,14 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QPushButton" name="comhelp_window">
+         <widget class="QPushButton" name="clear_btn">
           <property name="text">
-           <string>串口助手</string>
+           <string>重置存储</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="restart_btn">
+         <widget class="QPushButton" name="save_btn">
           <property name="text">
            <string>保存数据</string>
           </property>
@@ -393,7 +393,7 @@
      <x>0</x>
      <y>0</y>
      <width>1323</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

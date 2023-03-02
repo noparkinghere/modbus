@@ -162,9 +162,9 @@ buffer ： 完整的缓存数据
 static uint8_t data_to_buff(volatile RegGroup_t *reg, uint16_t start, uint8_t len, uint8_t *buffer) {
     uint16_t read_reg_len = buffer[5];
 
-    g_itest16 = start;
-    g_itest16 = read_reg_len;
-    g_itest16 = reg->end_addr;
+    // g_itest16 = start;
+    // g_itest16 = read_reg_len;
+    // g_itest16 = reg->end_addr;
 
     /* 起始位置不在合法范围内。 */
     if (start < reg->start_addr) {

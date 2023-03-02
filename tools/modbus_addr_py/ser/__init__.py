@@ -23,7 +23,7 @@ def run():
         app = QApplication(sys.argv)
         w = ser.mainWindow.MyMainWindow()
         w.setWindowIcon(QIcon("D:\\OneDrive\work\\totalizer\\bus\\tools\\modbus_addr_py\\img.ico"))
-        w.setWindowTitle("商用积算仪测试")
+        w.setWindowTitle("转换器测试工具")
         w.show()
         sys.exit(app.exec_())
     except Exception as e:
